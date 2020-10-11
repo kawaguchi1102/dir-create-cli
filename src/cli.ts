@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import loadYamlFile from './loadYamlFile';
 import createDir from './createDir';
 
