@@ -1,0 +1,38 @@
+{
+  "name": "dir-create-cli",
+  "version": "0.0.1",
+  "description": "a command line tool to create directories",
+  "kaywords": [
+    "cli-app",
+    "cli",
+    "command-line",
+    "command",
+    "dir"
+  ],
+  "main": "dist/cli.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawaguchi1102/dir-create-cli.git"
+  },
+  "author": "kawaguchi1102 <developer@kawaguchi-design.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kawaguchi1102/dir-create-cli/issues"
+  },
+  "homepage": "https://github.com/kawaguchi1102/dir-create-cli#readme",
+  "devDependencies": {
+    "@types/node": "^14.11.5",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "commander": "^6.1.0",
+    "js-yaml": "^3.14.0"
+  }
+}
