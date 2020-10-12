@@ -30,11 +30,18 @@ sample:
             item_1:
 ```
 
+Command to copy sample `createdir.yaml` directly into the directory: 
+
+```console
+$ dir-create --sample
+```
+
 ## Options
 
 ```text
 -V, --version           output the version number
 -c, --create            create directory
+--sample                copy sample yaml
 -h, --help              display help for command
 ```
 
