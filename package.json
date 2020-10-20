@@ -1,6 +1,6 @@
 {
   "name": "dir-create-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "a command line tool to create directories",
   "kaywords": [
     "cli-app",
@@ -15,7 +15,8 @@
     "dir-create": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "sample"
   ],
   "scripts": {
     "build": "tsc",
