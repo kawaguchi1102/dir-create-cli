@@ -1,20 +1,30 @@
-const currentDir = process.cwd();
-let dirPath = currentDir;
+type path = string;
+type createDirObject = {
+  [x: string]: any;
+  hasOwnProperty: (arg0: string) => any;
+}
+
+const currentDir: path = process.cwd();
+let dirPath: string | boolean = currentDir;
 
 /**
  * 正規表現で最後のpathを削除
- * @param dirPath: any
+ * @param dirPath
  */
-const concatPath = (dirPath: any) => {
-  const lastPath = dirPath.match(/\/([^/]*?)$/)[0];
-  return dirPath.replace(lastPath, '');
+const concatPath = (dirPath: string | boolean) => {
+  if (typeof dirPath !== "boolean") {
+    const lastPath: RegExpMatchArray | null = dirPath.match(/\/([^/]*?)$/);
+    if (lastPath) {
+      return dirPath.replace(lastPath[0], '');
+    }
+  }
+  return false;
 }
 
 /**
- *
- * @param object: { [x: string]: any; hasOwnProperty: (arg0: string) => any; }
+ * @param object
  */
-const createDir = (object: { [x: string]: any; hasOwnProperty: (arg0: string) => any; }) => {
+const createDir = (object: createDirObject) => {
   let countDir: number = 1;
   let key: string | number;
   for(key in object) {
